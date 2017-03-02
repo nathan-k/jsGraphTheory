@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jsGraphTheory Test</title>
+	<meta charset="utf-8">
+	<script language="javascript" type="text/javascript" src="jsGraphTheory.js"></script>
+    <script language="javascript">
+        function init(){
+            var graph = new jsGraph();
+            var graph2 = new jsGraph();
+            
+            graph2.add_node(1);
+            graph2.add_node(2);
+            graph2.add_node(3);
+            graph2.add_node(4);
+            graph2.add_node(5);
+            graph2.add_node(6);
+            
+            graph2.add_edge([1,2]);
+            graph2.add_edge([1,5]);
+            graph2.add_edge([2,6]);
+            graph2.add_edge([2,3]);
+            graph2.add_edge([2,4]);
+            graph2.add_edge([3,6]);
+            graph2.add_edge([3,4]);
+            graph2.add_edge([3,5]);
+            graph2.add_edge([4,6]);
+            graph2.add_edge([4,5]);
+            graph2.add_edge([5,6]);
+            
+            graph.display_info();
+            
+            console.log(graph2.algo_fleury());
+        }
+    </script>
+</head>
+<body onload="init()">
+    <pre id="output_pre"></pre>
+</body>
+</html>
